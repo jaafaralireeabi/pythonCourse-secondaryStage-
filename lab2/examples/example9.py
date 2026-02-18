@@ -1,4 +1,4 @@
-
+# program to calculate gross pay
 BASE_HOURS = 40 
 OT_MULTIPLIER = 1.5 
 hours = float(input("Enter the number of hours worked: "))
