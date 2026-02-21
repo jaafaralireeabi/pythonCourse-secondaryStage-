@@ -3,25 +3,31 @@
 """
 1-  تعريف متغيرين بأسم a,b على سبيل المثال لا الحصر
 2- واخذ قيمتهما من المستخدم input from user
-3- تعريف متغير لكل عملية حسابية )...,sum,sub,mul,div)
-4- عرض نتائج كل عملية
+3- تعريف متغير يقرأ من المستخدم، لتحديد العملية الحسابية المطلوبة
+4- اذا كان المدخل opr == "+" -> res= a+b ....
+4- عرض نتيجة
 
 """
 
 a = float(input("enter the first number: "))
+opr = input("enter the opertion (+,-,*,/,%,^): ")
 b = float(input("enter the second number: "))
+res = 0
 
-sum = a + b
-sub = a - b
-mul = a * b
-div = a % b
+if opr == "+":
+    res = a + b
+elif opr == "-":
+    res = a - b
+elif opr == "*":
+    res = a * b
+elif opr == "/":
+    res = a / b
+elif opr == "%":
+    res = a % b
+elif opr == "^":
+    res = a ** b
+else:
+    print("please enter (+,-,*,/,%,^)")
 
-"""
-يمكنك اضافة عمليات حسابية اخرى
-مختلفة حاول ان تجرب ذلك )مثل باقي القسمة او الاس او غير ذلك(
-"""
 
-print("a + b = ", sum)
-print("a - b = ", sub)
-print("a * b = ", mul)
-print("a / b = ", div)
+print(f"{a} {opr} {b} = {res}")
